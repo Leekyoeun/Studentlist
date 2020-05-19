@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,6 +22,13 @@ namespace Studentlist
             list.Add(new Teacher() { name = "박성래", major = "수학" });
             list.Add(new Teacher() { name = "민주리", major = "정보컴퓨터" });
 
+            for(int i=0; i<list.Count; i++)
+            {
+                if (list[i].major=="정보컴퓨터")
+                {
+                    list.RemoveAt(i);
+                }
+            }
             foreach(var item in list)
             {
                 if (item.major == "정보컴퓨터")
